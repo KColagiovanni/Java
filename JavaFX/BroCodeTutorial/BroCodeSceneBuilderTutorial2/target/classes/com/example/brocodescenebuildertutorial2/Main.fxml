@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.brocodescenebuildertutorial2.Main">
+   <children>
+      <Button layoutX="284.0" layoutY="14.0" mnemonicParsing="false" onAction="#up" text="Up" />
+      <Button layoutX="32.0" layoutY="288.0" mnemonicParsing="false" onAction="#left" text="Left" />
+      <Button layoutX="532.0" layoutY="288.0" mnemonicParsing="false" onAction="#right" text="Right" />
+      <Button layoutX="277.0" layoutY="561.0" mnemonicParsing="false" onAction="#down" text="Down" />
+      <Circle fx:id="myCircle" fill="#1fff3a" layoutX="300.0" layoutY="300.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Glow>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </Glow>
+         </effect></Circle>
+      <Button layoutX="469.0" layoutY="600.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <Button layoutX="86.0" layoutY="600.0" mnemonicParsing="false" onAction="#bigger" text="Bigger" />
+      <Button layoutX="22.0" layoutY="600.0" mnemonicParsing="false" onAction="#smaller" text="Smaller" />
+      <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#upLeft" text="Up/Left" />
+      <Button layoutX="522.0" layoutY="14.0" mnemonicParsing="false" onAction="#upRight" text="Up/Right" />
+      <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#downLeft" text="Down/Left" />
+      <Button layoutX="514.0" layoutY="561.0" mnemonicParsing="false" onAction="#downRight" text="Down/Right" />
+      <Button layoutX="529.0" layoutY="600.0" mnemonicParsing="false" onAction="#quitProgram" text="Close" />
+   </children>
+</AnchorPane>
